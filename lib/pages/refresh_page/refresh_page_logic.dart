@@ -8,9 +8,9 @@ class RefreshPageLogic extends GetxController {
   void qancjbgncsd() async {
     final hadNetwork = await InternetConnectionChecker.instance.hasConnection;
     if (!hadNetwork) {
-      Fluttertoast.showToast(msg: 'Check the network and try again');
+      Fluttertoast.showToast(msg: 'Please check the network and refreshn');
     } else {
-      Fluttertoast.showToast(msg: 'You are connected to the internet');
+      Fluttertoast.showToast(msg: 'Your network connection has been restored');
       Get.back();
     }
   }
