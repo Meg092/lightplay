@@ -24,7 +24,7 @@ class ChangeLight extends GetView<PlayStartLogic> {
         body: SafeArea(
           child: InAppWebView(
             initialUrlRequest: URLRequest(
-              url: WebUri.uri(Uri.parse(controller.vpni.value)),
+              url: WebUri.uri(Uri.parse(controller.dkglxmc.value)),
               timeoutInterval:10
             ),
             initialSettings: InAppWebViewSettings(

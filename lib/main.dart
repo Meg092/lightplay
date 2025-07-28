@@ -9,8 +9,11 @@ import 'package:light_play/pages/light_first/light_first_binding.dart';
 import 'package:light_play/pages/light_first/light_first_view.dart';
 import 'package:light_play/pages/light_first/multicolored_lights/multicolored_lights_binding.dart';
 import 'package:light_play/pages/light_first/multicolored_lights/multicolored_lights_view.dart';
+import 'package:light_play/pages/light_first/play_start/play_start_binding.dart';
+import 'package:light_play/pages/light_first/play_start/play_start_view.dart';
 import 'package:light_play/pages/light_first/red_green_light/red_green_light_binding.dart';
 import 'package:light_play/pages/light_first/red_green_light/red_green_light_view.dart';
+import 'package:light_play/pages/light_first/sos_light/change_light.dart';
 import 'package:light_play/pages/light_first/sos_light/sos_light_binding.dart';
 import 'package:light_play/pages/light_first/sos_light/sos_light_view.dart';
 import 'package:light_play/pages/light_second/light_second_binding.dart';
@@ -56,7 +59,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       getPages: Years,
-      initialRoute: '/LightTab',
+      initialRoute: '/',
       theme: ThemeData(
         useMaterial3: true,
         primaryColor: primaryColor,
@@ -96,10 +99,12 @@ class MyApp extends StatelessWidget {
   }
 }
 List<GetPage<dynamic>> Years = [
+  GetPage(name: '/', page: () => PlayStartView(), binding: PlayStartBinding()),
   GetPage(name: '/LightTab', page: () => LightTabPage(), binding: LightTabBinding()),
   GetPage(name: '/LightFirst', page: () => LightFirstPage(), binding: LightFirstBinding()),
   GetPage(name: '/LightSecond', page: () => LightSecondPage(), binding: LightSecondBinding()),
   GetPage(name: '/LightThird', page: () => LightThirdPage(), binding: LightThirdBinding()),
+  GetPage(name: '/ChangeLight', page: () => ChangeLight()),
   GetPage(name: '/AlarmDetails', page: () => AlarmDetailsPage(), binding: AlarmDetailsBinding()),
   GetPage(name: '/RedGreenLight', page: () => RedGreenLightPage(), binding: RedGreenLightBinding()),
   GetPage(name: '/FlashLight', page: () => FlashLightPage(), binding: FlashLightBinding()),

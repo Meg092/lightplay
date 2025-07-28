@@ -10,8 +10,8 @@ class PlayStartView extends GetView<PlayStartLogic> {
     return Scaffold(
       body: Center(
         child: Obx(
-          () => controller.bogan.value
-              ? const CircularProgressIndicator(color: Colors.blueAccent)
+          () => controller.crooks.value
+              ? const CircularProgressIndicator(color: Colors.white)
               : buildError(),
         ),
       ),
@@ -25,7 +25,7 @@ class PlayStartView extends GetView<PlayStartLogic> {
         children: [
           IconButton(
             onPressed: () {
-              controller.ptfyuo();
+              controller.shipmxwa();
             },
             icon: const Icon(
               Icons.restart_alt,
